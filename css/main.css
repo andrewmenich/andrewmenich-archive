@@ -11,7 +11,7 @@
   color: #474747;
   margin-top: 0;
   font-family: "PT Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: center; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -592,9 +592,35 @@ template {
 .services {
   padding-top: 8rem; }
 
+.service-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.service {
+  height: 55rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .service img {
+    -ms-flex-item-align: start;
+    align-self: flex-start; }
+  .service .service-one {
+    -ms-flex-item-align: start;
+    align-self: flex-start; }
+
 html {
   font-size: 10px; }
 
 body {
   font-size: 16px;
   font-family: "PT Sans", sans-serif; }
+
+img {
+  max-width: 100%;
+  max-height: 100%; }
