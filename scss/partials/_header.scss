@@ -1,0 +1,233 @@
+.header {
+    background-image: url('../img/background/backgroundr_1.jpg');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    min-height: 100vh;
+
+    h1 {
+        font-family: $ff-ss;
+        font-weight: $fw-norm;
+        font-size: 4rem;
+        line-height: 1.25;
+        cursor: default;
+
+        @media (max-width: 600px){
+            font-size: 3rem;
+        }
+    
+    }
+    
+    img {
+        height: 100%;
+        object-fit: cover;
+        flex: 2 1 57%;
+    }
+}
+
+.header::after {
+    content: '';
+    background: #06beb6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.75;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+}
+
+.header-nested {
+    z-index: 999;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1 2 35%;
+    color: $white;
+    overflow: hidden;
+
+    button {
+        font-size: 2.5rem;
+        margin: 10rem auto 0;
+        color: $black;
+        border: 3px solid $black;
+        background-color: transparent;
+        padding: 1.5rem;
+        width: 30rem;
+        height: 7rem;
+        outline: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    button:focus {
+        background-color: rgba(0,0,0,0.25);
+        color: $white;
+        border: 3px solid $white;
+    }
+}
+
+.scroll {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 20px; left: calc(50% - 51.703px);
+}
+
+// .emoji {
+//     font-size: 10rem;
+//     cursor: default;
+//     animation: wave .5s 1s linear 2;
+// }
+
+// .emoji:hover {
+//     animation: wave .5s 1s linear 2;
+// }
+.logo-container {
+    align-self: center;
+}
+
+.logo {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 600px){
+        flex-wrap: wrap;
+    }
+}
+
+.logo-mark {
+    padding: 8px 15px;
+    align-self: center;
+    animation: logoAnimation 1s ease-in-out 4s 1 forwards;
+    margin-right: 2rem;
+
+    @media (max-width: 600px){
+        margin-right: 0;
+    }
+
+}
+
+.logo-svg {
+    transform: translateX(180px);
+    transition: all 2s cubic-bezier(0.9,-0.05, 0, 1.03);
+
+    @media (max-width: 600px){
+        transform: translateX(0);
+    }
+
+}
+
+.logo-name{
+    animation: logoName 1.25s ease-in-out 1 forwards;
+    align-self: center;
+
+    @media (max-width: 600px){
+        display: none;
+    }
+
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.st0 {
+    fill:none;
+    stroke:#474747;
+    stroke-width:19;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    animation: strokeColor 1s ease-in-out 5s 1 forwards;
+}
+
+.st1 {
+    fill:none;
+    stroke:#474747;
+    stroke-width:20;
+    stroke-linecap:square;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    animation: strokeColor 1s ease-in-out 5s 1 forwards;
+}
+
+.BqZpLosS_0{
+    stroke-dasharray:656 658;
+    stroke-dashoffset:657;
+    animation:logo_draw 2800ms ease-in-out 1000ms forwards;
+}
+
+.BqZpLosS_1{
+    stroke-dasharray:24 26;
+    stroke-dashoffset:25;
+    animation:logo_draw2 500ms ease-in-out 4000ms forwards;
+}
+
+// @keyframes wave {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+//     25% {
+//         transform: rotate(-45deg);
+//     }
+//     50% {
+//         transform: rotate(0deg);
+//     }
+//     75% {
+//         transform: rotate(45deg);
+//     }
+//     100% {
+//         transform: rotate(0deg);
+//     }
+// }
+
+@keyframes logoAnimation {
+    0% {
+        background-color: none;
+    }
+    100% {
+        background-color: $black;
+    }
+}
+
+@keyframes logoName {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes logo_draw {
+    75% {
+        stroke: #474747;
+    }
+    100%{
+        stroke-dashoffset:0;
+        stroke: #fff;
+    }
+}
+
+@keyframes logo_draw2 {
+    100%{
+        stroke-dashoffset:0;
+        stroke: #fff;
+    }
+}
+
+@keyframes testing {
+    90% {
+        transform: translateX(180px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

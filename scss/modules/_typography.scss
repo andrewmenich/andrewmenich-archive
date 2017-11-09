@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif');
+
+$ff-ss: 'PT Sans', sans-serif;
+$ff-s: 'PT Serif', serif;
+
+$fw-norm: 400;
+$fw-bold: 700;
+
+.text-header {
+    font-family: $ff-ss;
+    font-weight: $fw-bold;
+    font-size: 5rem;
+    color: $red;
+    text-align: center;
+    margin: 1rem auto;
+
+}
+
+.text-subheader {
+    color: $black;
+    margin-top: 0;
+    font-family: $ff-ss;
+    font-size: 1.6rem;
+    text-align: center;
+}

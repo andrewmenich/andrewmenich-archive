@@ -1,0 +1,13 @@
+@import 'modules/all';
+@import 'vendor/normalize';
+@import 'partials/all';
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 16px;
+    font-family: $ff-ss;
+}
