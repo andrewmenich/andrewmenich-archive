@@ -75,15 +75,6 @@
     bottom: 20px; left: calc(50% - 51.703px);
 }
 
-// .emoji {
-//     font-size: 10rem;
-//     cursor: default;
-//     animation: wave .5s 1s linear 2;
-// }
-
-// .emoji:hover {
-//     animation: wave .5s 1s linear 2;
-// }
 .logo-container {
     align-self: center;
 }
@@ -167,23 +158,6 @@
     animation:logo_draw2 500ms ease-in-out 4000ms forwards;
 }
 
-// @keyframes wave {
-//     0% {
-//         transform: rotate(0deg);
-//     }
-//     25% {
-//         transform: rotate(-45deg);
-//     }
-//     50% {
-//         transform: rotate(0deg);
-//     }
-//     75% {
-//         transform: rotate(45deg);
-//     }
-//     100% {
-//         transform: rotate(0deg);
-//     }
-// }
 
 @keyframes logoAnimation {
     0% {
