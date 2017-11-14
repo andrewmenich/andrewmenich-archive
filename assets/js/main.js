@@ -80,3 +80,44 @@ window.onload = function() {
     });
 }
 
+let cssBar = document.querySelector('.css'),
+    htmlBar = document.querySelector('.html'),
+    jsBar = document.querySelector('.javascript'),
+    jqBar = document.querySelector('.jquery'),
+    resBar = document.querySelector('.responsive'),
+    learnBar = document.querySelector('.learn');
+
+// reveal skills section
+window.sr = ScrollReveal();
+sr.reveal('.skills', {
+    duration: 1000,
+    afterReveal: function(){
+        htmlBar.style.width = "90%";
+        cssBar.style.width = "90%";
+        jsBar.style.width = "60%";
+        jqBar.style.width = "50%";
+        resBar.style.width = "80%";
+        learnBar.style.width = "100%";
+    }
+});
+sr.reveal('.tools');
+
+// tippy.js tooltips
+tippy('.css', {
+    position: 'top',
+    animation: 'scale',
+    duration: 500,
+    size: 'large',
+    arrow: true
+});
+
+const typedOptions = {
+    strings: ["Web Developer", "Photographer", "Musician", "Teacher", "DIYer"],
+    typeSpeed: 60,
+    backSpeed: 60,
+    backDelay: 1000,
+    loop: true,
+    loopCount: Infinity
+}
+
+var typed = new Typed("#changeWord", typedOptions);

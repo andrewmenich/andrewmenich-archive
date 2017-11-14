@@ -23,6 +23,7 @@
     "gulp-sourcemaps": "^2.6.1"
   },
   "dependencies": {
-    "swipejs": "^2.2.10"
+    "swipejs": "^2.2.10",
+    "typed.js": "^2.0.6"
   }
 }
