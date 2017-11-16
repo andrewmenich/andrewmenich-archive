@@ -1,3 +1,4 @@
+// ======= MAIN LOGO ANIMATION =======
 window.onload = function() {
     let firstAnimate = document.querySelector('.st0');
     let logoAnimate = document.querySelector('.st1');
@@ -13,6 +14,21 @@ window.onload = function() {
         logoLetters.classList.add('logo-name');        
     });
 }
+
+// ====== ABOUT ME BUTTON =======
+
+function buttonClick(ids){
+    return document.getElementById(ids).addEventListener('click', function(){
+        document.querySelector('.contact').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    })
+}
+
+buttonClick('headerBtn');
+buttonClick('contactBtn');
+
+// ====== SAMPLE WORK SLIDER =======
 
 let slide = document.querySelectorAll('.sample'),
     leftArrow = document.querySelector('#slide-left'),
@@ -64,44 +80,15 @@ rightArrow.addEventListener('click', function(){
 
 startSlide();
 
-window.onload = function() {
-    let firstAnimate = document.querySelector('.st0');
-    let logoAnimate = document.querySelector('.st1');
-    let logoSlide = document.querySelector('.logo-svg')
-    let logoLetters = document.querySelector('#logo_name');
-
-    firstAnimate.addEventListener('animationend', function(){
-        logoSlide.style.WebkitTransform = 'none';    
-    });
-
-    logoAnimate.addEventListener('animationend', function(){
-        logoLetters.classList.remove('hidden');
-        logoLetters.classList.add('logo-name');        
-    });
-}
-
-let cssBar = document.querySelector('.css'),
-    htmlBar = document.querySelector('.html'),
-    jsBar = document.querySelector('.javascript'),
-    jqBar = document.querySelector('.jquery'),
-    resBar = document.querySelector('.responsive'),
-    learnBar = document.querySelector('.learn');
+// ===== Reveal on Scroll settings ======
 
 // reveal skills section
 window.sr = ScrollReveal();
-sr.reveal('.skills', {
-    duration: 1000,
-    afterReveal: function(){
-        htmlBar.style.width = "90%";
-        cssBar.style.width = "90%";
-        jsBar.style.width = "60%";
-        jqBar.style.width = "50%";
-        resBar.style.width = "80%";
-        learnBar.style.width = "100%";
-    }
+sr.reveal('.skill-container', {
+    duration: 1000
 });
-sr.reveal('.tools');
 
+// ====== TYPED.JS SETTINGS =======
 
 const typedOptions = {
     strings: ["Web Developer", "Photographer", "Musician", "Teacher", "DIYer", "World Traveler"],
