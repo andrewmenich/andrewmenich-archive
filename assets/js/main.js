@@ -102,22 +102,71 @@ sr.reveal('.skills', {
 });
 sr.reveal('.tools');
 
-// tippy.js tooltips
-tippy('.css', {
-    position: 'top',
-    animation: 'scale',
-    duration: 500,
-    size: 'large',
-    arrow: true
-});
 
 const typedOptions = {
-    strings: ["Web Developer", "Photographer", "Musician", "Teacher", "DIYer"],
+    strings: ["Web Developer", "Photographer", "Musician", "Teacher", "DIYer", "World Traveler"],
     typeSpeed: 60,
     backSpeed: 60,
     backDelay: 1000,
     loop: true,
     loopCount: Infinity
+};
+
+const typed = new Typed("#changeWord", typedOptions);
+
+// ====== CONTACT FORM =======
+
+var config = {
+    apiKey: "AIzaSyDAUN9UtwvBfzu0sSbH4AW_IBB1OjixRSA",
+    authDomain: "portfolio-contact-3924b.firebaseapp.com",
+    databaseURL: "https://portfolio-contact-3924b.firebaseio.com",
+    projectId: "portfolio-contact-3924b",
+    storageBucket: "portfolio-contact-3924b.appspot.com",
+    messagingSenderId: "227932436675"
+  };
+  firebase.initializeApp(config);
+
+
+  // Reference message collection
+
+  var messagesRef = firebase.database().ref('messages');
+
+// function to get form values
+function getInputVal(id){
+    return document.getElementById(id).value;
 }
 
-var typed = new Typed("#changeWord", typedOptions);
+function saveMessage(userName, userEmail, userMessage) {
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+        name: userName,
+        email:  userEmail,
+        message: userMessage
+    })
+}
+
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+function submitForm(e){
+    // Prevents default attempt of submitting form to current page
+    e.preventDefault();
+    //get values
+    let userName = getInputVal('userName'),
+        userEmail = getInputVal('userEmail'),
+        userMessage = getInputVal('userMessage');
+    
+    //save message
+    saveMessage(userName, userEmail, userMessage);
+
+    // show sent alert
+    document.querySelector('.alert').style.display = "block";
+
+    //hide alert after 3 s.
+    setTimeout(function(){
+        document.querySelector('.alert').style.display = "none";
+    }, 3000);
+
+    //clear inputs
+    document.getElementById('contactForm').reset();
+}
+

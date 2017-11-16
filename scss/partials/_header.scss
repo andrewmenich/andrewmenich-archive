@@ -8,7 +8,7 @@
     height: 100vh;
     min-height: 100vh;
 
-    h1 {
+    h1, h2 {
         font-family: $ff-ss;
         font-weight: $fw-norm;
         font-size: 4rem;
@@ -18,8 +18,15 @@
         @media (max-width: 600px){
             font-size: 3rem;
         }
-    
     }
+
+    h2 {
+        font-weight: $fw-bold;
+        @media (min-width:600px){
+            display: none;
+        }
+    }
+
     
     img {
         height: 100%;

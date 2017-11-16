@@ -373,15 +373,20 @@ template {
   flex-wrap: wrap;
   height: 100vh;
   min-height: 100vh; }
-  .header h1 {
+  .header h1, .header h2 {
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 4rem;
     line-height: 1.25;
     cursor: default; }
     @media (max-width: 600px) {
-      .header h1 {
+      .header h1, .header h2 {
         font-size: 3rem; } }
+  .header h2 {
+    font-weight: 700; }
+    @media (min-width: 600px) {
+      .header h2 {
+        display: none; } }
   .header img {
     height: 100%;
     -o-object-fit: cover;
@@ -601,10 +606,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 5rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 5rem;
   height: 55rem;
   overflow: hidden; }
 
@@ -776,7 +783,8 @@ template {
 
 .about {
   max-width: 60ch;
-  line-height: 2.6rem; }
+  line-height: 2.6rem;
+  margin-top: 4rem; }
   @media (max-width: 768px) {
     .about {
       margin: 0 auto;
@@ -831,8 +839,7 @@ template {
   align-self: center;
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: #F7F7F7; }
   .social-container ul {
     margin: 0;
     padding: 1rem 0;
@@ -858,7 +865,6 @@ template {
 
 .btn1 {
   margin: 4rem 2rem 0;
-  border-radius: 10px 0 0 0;
   padding: 1.5rem 3rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -965,17 +971,27 @@ template {
 .skill-box {
   width: 35rem;
   height: 25rem;
-  border: 2px solid rgba(71, 71, 71, 0.5);
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(71, 71, 71, 0.5);
+  box-shadow: 0px 0px 6px 2px rgba(71, 71, 71, 0.5);
   border-radius: 5px;
   position: relative;
   margin: 4rem 2rem; }
   .skill-box:hover {
-    border: 2px solid transparent;
+    border: 1px solid rgba(71, 71, 71, 0.25);
     -webkit-box-shadow: 0px 0px 6px 2px rgba(71, 71, 71, 0.5);
     box-shadow: 0px 0px 6px 2px rgba(71, 71, 71, 0.5); }
     .skill-box:hover .web-logo {
       -webkit-transform: scale(1.025);
       transform: scale(1.025); }
+    .skill-box:hover i {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
+    .skill-box:hover .fa {
+      color: #06beb6; }
+    .skill-box:hover li img {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
   .skill-box ul {
     padding-left: 0;
     margin-top: 5rem;
@@ -1010,6 +1026,103 @@ template {
   margin-top: 0;
   font-weight: bold;
   text-align: center; }
+
+.contact {
+  background-color: #F7F7F7;
+  padding-bottom: 5rem; }
+
+.contact-container {
+  margin: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.contact-form {
+  min-width: 32rem;
+  margin: 0 2rem; }
+  .contact-form h2 {
+    color: #06beb6; }
+
+.contact-sidebar {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 0 5rem;
+  margin-top: 2rem; }
+  .contact-sidebar a, .contact-sidebar a:visited {
+    color: #06beb6; }
+
+.contact-social ul {
+  padding-left: 0;
+  margin-left: -1rem; }
+
+.contact-social li {
+  display: inline-block;
+  list-style: none;
+  font-size: 2.2rem;
+  margin: 0 1rem; }
+
+input, textarea {
+  width: 100%;
+  display: block;
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  padding-left: 2rem; }
+  input:placeholder-shown, textarea:placeholder-shown {
+    color: #ababab;
+    font-size: 1.2rem;
+    padding-left: 2rem; }
+
+input {
+  height: 2.5rem; }
+
+textarea {
+  padding-top: 1rem; }
+
+.btn2 {
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+  background-color: #06beb6;
+  cursor: pointer; }
+  .btn2:hover {
+    background-color: #06afa8; }
+
+.contact-title {
+  margin: 5rem 0 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem; }
+
+.location-desc {
+  margin-top: 0;
+  padding: 0; }
+
+.email {
+  font-size: 2rem;
+  text-decoration: none;
+  border-bottom: 2px solid #06beb6; }
+
+.alert {
+  width: 100%;
+  text-align: center;
+  margin-left: 1rem;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem 0;
+  display: none; }
 
 html {
   font-size: 10px; }
