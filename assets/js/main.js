@@ -30,55 +30,55 @@ buttonClick('contactBtn');
 
 // ====== SAMPLE WORK SLIDER =======
 
-let slide = document.querySelectorAll('.sample'),
-    leftArrow = document.querySelector('#slide-left'),
-    rightArrow = document.querySelector('#slide-right'),
-    current = 0;
+// let slide = document.querySelectorAll('.sample'),
+//     leftArrow = document.querySelector('#slide-left'),
+//     rightArrow = document.querySelector('#slide-right'),
+//     current = 0;
 
-// clear all slides
-function reset() {
-    for(let i = 0; i < slide.length; i++) {
-        slide[i].style.display = 'none';
-    }
-}
+// // clear all slides
+// function reset() {
+//     for(let i = 0; i < slide.length; i++) {
+//         slide[i].style.display = 'none';
+//     }
+// }
 
-// initialize slider
-function startSlide(){
-    reset();
-    slide[0].style.display = 'flex';
-}
+// // initialize slider
+// function startSlide(){
+//     reset();
+//     slide[0].style.display = 'block';
+// }
 
-// Show Previous
-function slideLeft(){
-    reset();
-    slide[current - 1].style.display = 'flex';
-    current--;
-}
+// // Show Previous
+// function slideLeft(){
+//     reset();
+//     slide[current - 1].style.display = 'block';
+//     current--;
+// }
 
-// Show Next
-function slideRight(){
-    reset();
-    slide[current + 1].style.display = 'flex';
-    current++;
-}
+// // Show Next
+// function slideRight(){
+//     reset();
+//     slide[current + 1].style.display = 'block';
+//     current++;
+// }
 
-// left button functionality
-leftArrow.addEventListener('click', function(){
-    if(current === 0){
-        current = slide.length;
-    }
-    slideLeft();
-});
+// // left button functionality
+// leftArrow.addEventListener('click', function(){
+//     if(current === 0){
+//         current = slide.length;
+//     }
+//     slideLeft();
+// });
 
-// right button functionality
-rightArrow.addEventListener('click', function(){
-    if(current === slide.length - 1){
-        current = -1
-    }
-    slideRight();
-});
+// // right button functionality
+// rightArrow.addEventListener('click', function(){
+//     if(current === slide.length - 1){
+//         current = -1
+//     }
+//     slideRight();
+// });
 
-startSlide();
+// startSlide();
 
 // ===== Reveal on Scroll settings ======
 
@@ -156,4 +156,15 @@ function submitForm(e){
     //clear inputs
     document.getElementById('contactForm').reset();
 }
+
+var workSlider = document.getElementById('slider');
+var flkty = new Flickity( workSlider, {
+  cellAlign: 'left',
+  contain: true,
+  percentPosition: false,
+  freeScroll: false,
+  wrapAround: true,
+  bgLazyLoad: true,
+  adaptiveHeight: true
+});
 

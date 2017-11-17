@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Title</title>
   <link rel="stylesheet" href="css/main.css">  
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
@@ -81,57 +82,137 @@
   <section class="sample-work">
 
     <h1 class="text-header">Sample Work</h1>
-    <p class="text-subheader">We do only what we do best.</p>
+    <p class="text-subheader">Personal Projects and Client Projects</p>
 
     <div id='slider' class='slide'>
-        <i id="slide-left" class="fa fa-angle-left fa-4x"></i>
 
-        <div class="sample">
+      <div class="sample">
+        
+        <p class="work-title">RGB Guessing Game</p>
+        
+        <div class="sample-image image1" data-flickity-bg-lazyload="./../img/Mockups/rgbgame.jpg">
+            <!--Sample Work Image Container-->
+        </div>
 
-          <div class="sample-image image1">
-              <!--Sample Work Image Container-->
-          </div>
+        <div class="work-info">
+          <p class="work-sub"><strong>Description</strong></p>
+          <p class="work-desc">In this game, users have to select the correct color block that matches the RGB color code defined at the top. This game is built with JavaScript and styled with CSS Flexbox.</p>
 
-          <div class="sample-info">
-            <p class="work-title">Joel O'Dorisio</p>
-            <p class="work-subtitle">Sample subtitle text goes here.</p>
-            <p class="work-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veniam sequi molestias dolorem, error quam similique cumque qui nobis rem!</p>
-            <a href="#" class="work-link">See Live Site</a>
-          </div>
+          <p class="work-sub"><strong>Tools Used</strong></p>
+          <p class="work-tools">JavaScript, Flexbox</p>
+
+          <p class="center"><a href="https://github.com/andrewmenich/RGBGame" class="work-link" target="_blank" alt="">View Source Code</a></p>
 
         </div>
 
-        <div class="sample">
-          
-          <div class="sample-image image2">
-            <!-- <img src="./img/Mockups/1_Desktop.png" alt=""> -->
-          </div>
+      </div>
 
-          <div class="sample-info">
-            <p class="work-title">Cool O'Morosio</p>
-            <p class="work-subtitle">Yabba Dabba Doo Dah</p>
-            <p class="work-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veniam sequi molestias dolorem, error quam similique cumque qui nobis rem!</p>
-            <a href="#" class="work-link">See Live Site</a>
-          </div>
-          
+      <div class="sample">
+
+        <p class="work-title">Website Redesign for Local Artist</p>
+
+        <div class="sample-image image2" data-flickity-bg-lazyload="./../img/Mockups/proposal.jpg">
+            <!--Sample Work Image Container-->
         </div>
 
-        <div class="sample">
-          
-          <div class="sample-image image3">
-            <!-- <img src="./img/Mockups/1_Desktop.png" alt=""> -->
-          </div>
+        <div class="work-info">
+          <p class="work-sub"><strong>Description</strong></p>
+          <p class="work-desc">I have recently began working with Joel O - a sculptor, glass artist, and professor from Bowling Green, Ohio. He was in need of a website redesign and a way to easily update content. As the site has not yet been developed, I have attached the project proposal I prepared for him below.</p>
 
-          <div class="sample-info">
-            <p class="work-title">Band Repair Parts</p>
-            <p class="work-subtitle">ECommerce Store Built with WordPress</p>
-            <p class="work-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veniam sequi molestias dolorem, error quam similique cumque qui nobis rem!</p>
-            <a href="#" class="work-link">See Live Site</a>
-          </div>
-          
+          <p class="work-sub"><strong>Tools Used</strong></p>
+          <p class="work-tools">Photoshop, Illustrator, InDesign, WordPress</p>
+
+          <p class="center"><a href="./files/Proposal_JoelO.pdf" class="work-link" target="_blank" alt="">View Proposal (PDF)</a></p>
+
         </div>
 
-        <i id="slide-right" class="fa fa-angle-right fa-4x"></i>
+      </div>
+
+      <div class="sample">
+        
+        <p class="work-title">"YelpCamp"</p>
+        
+        <div class="sample-image image3" data-flickity-bg-lazyload="./../img/Mockups/yelpcamp.jpg">
+            <!--Sample Work Image Container-->
+        </div>
+
+        <div class="work-info">
+          <p class="work-sub"><strong>Description</strong></p>
+          <p class="work-desc">"YelpCamp" is a fictional project developed as a way to learn Express, Node.js, and MongoDB. It includes RESTful routing, user authentication, and user authorization. Deployed on Heroku. This was completed as part of Colt Steele's Web Developer Bootcamp on Udemy. <a href="./files/udemy_cert.pdf" alt="Link to Completion Certificate of online Web Developer Bootcamp" target="_blank"> Link to completion certificate.</a></p>
+
+          <p class="work-sub"><strong>Tools Used</strong></p>
+          <p class="work-tools">Express, Node.js, MongoDB, Bootstrap, JavaScript, REST, Heroku</p>
+
+          <p class="center"><a href="https://secret-plains-89110.herokuapp.com/" class="work-link" target="_blank" alt="">View Project</a></p>
+
+        </div>
+
+      </div>
+
+      <div class="sample">
+        
+        <p class="work-title">Band Repair Parts - eCommerce Store</p>
+        
+        <div class="sample-image image4" data-flickity-bg-lazyload="./../img/Mockups/brp.jpg">
+            <!--Sample Work Image Container-->
+        </div>
+
+        <div class="work-info">
+          <p class="work-sub"><strong>Description</strong></p>
+          <p class="work-desc">Band Repair Parts is an ecommerce store specializing in musical instrument repair parts. The client wanted an easy way to manage inventory and sales orders, while keeping overhead costs low. To meet these requirements I used WordPress with WooCommerce. </p>
+
+          <p class="work-sub"><strong>Tools Used</strong></p>
+          <p class="work-tools">WordPress, WooCommerce</p>
+
+          <p class="center"><a href="https://bandrepairparts.com/" class="work-link" target="_blank" alt="">View Live Site</a></p>
+
+        </div>
+
+      </div>
+
+      <div class="sample">
+        
+        <p class="work-title">Dryfuse Campus Properties</p>
+        
+        <div class="sample-image image5" data-flickity-bg-lazyload="./../img/Mockups/dcp.jpg">
+            <!--Sample Work Image Container-->
+        </div>
+
+        <div class="work-info">
+          <p class="work-sub"><strong>Description</strong></p>
+          <p class="work-desc">This website was created for a friend who rents properties to local university students. He needed a small website to showcase specific properties and answer FAQs potential tenants have. I used Jekyll to reduce redundancy and keep layout pages DRY. <br>
+          Side note: I photographed the two sample properties for this site, which can be seen <a href="https://andrewmenich.github.io/dpr/sample-properties/sample1" alt="" target="_blank">here</a></p>
+
+          <p class="work-sub"><strong>Tools Used</strong></p>
+          <p class="work-tools">JavaScript, Jekyll, Photoshop</p>
+
+          <p class="center"><a href="#" class="work-link">View Draft Site</a></p>
+
+        </div>
+
+      </div>
+
+      <div class="sample">
+        
+        <p class="work-title">Galbraith for Congress</p>
+
+        <div class="sample-image image6" data-flickity-bg-lazyload="./../img/Mockups/galb.jpg">
+          <!-- <img src="./img/Mockups/1_Desktop.png" alt=""> -->
+        </div>
+        
+        <div class="work-info">
+            <p class="work-sub"><strong>Description</strong></p>
+            <p class="work-desc">This website began as a static site, but as the campaign grew the team needed an easier way to access the content. I converted the static site to WordPress and gave a brief workshop on how to use WordPress to the campaign team.</p>
+
+            <p class="work-sub"><strong>Tools Used</strong></p>
+            <p class="work-tools">Sass, PHP, WordPress, Leadership skills</p>
+
+            <p class="center"><a href="http://galbraithforcongress.com/" class="work-link" target="_blank" alt="">View Live Site</a></p>
+
+        </div>
+        
+      </div>
+
     </div>
 
   </section>
@@ -325,7 +406,9 @@
 
   </section>
 
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-bg-lazyload@1.0.0/bg-lazyload.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="./assets/js/main.js" type="text/javascript"></script>
 </body>

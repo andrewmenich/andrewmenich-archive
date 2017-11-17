@@ -1,97 +1,102 @@
 .sample-work {
     background-color: #efefef;
+    padding-bottom: 8rem;
 }
 
 .sample {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 5rem;
-    height: 55rem;
+    width: 100%;
     overflow: hidden;
+    
 }
 
 .slide {
     position: relative;
     background-color: #EFEFEF;
-    height: 55rem;
-}
-
-.fa-angle-left, .fa-angle-right {
-    color: rgba($black, 0.5);
-    position: absolute;
-    top: 50%;
-    margin-top: -4rem;
-    cursor: pointer;
-}
-
-.fa-angle-left {
-    left: 2rem;
-}
-
-.fa-angle-right {
-    right:2rem;
+    // height: 55rem;
 }
 
 
 .sample-image {
-    flex: 1 1 50%;
-    height: auto;
+    height: 65vh;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    /* animation shorthand is not used in order to generate random animations via JS. */
-    animation-name: imageRise;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0, 0, 0.39, 1.26);
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     z-index: 999;
-    overflow: visible;
+    
+
+    // @media screen and (max-width: 576px){
+    //     margin: -8rem 0;
+    // }
 }
 
-.image1 {
-    background-image: url('./../img/Mockups/1_Desktop.png');
+.image1, .image2, .image3, .image4, .image5, .image6 {
+    background-size: cover;
 }
 
-.image2 {
-    background-image: url('./../img/Mockups/2_Desktop.png');
+.image5{
+
+    @media screen and (max-width: 576px){
+        background-position:right;
+    }
 }
 
-.image3 {
-    background-image: url('./../img/Mockups/3_desktop.png');
-}
 
-.sample-info {
-    flex: 2 3 50%;
-    margin-left: 10rem;
-    align-self: flex-start;
-    margin-top: 7rem;
-    line-height: 2.6rem;
-}
 .work-title {
+    text-align: center;
     font-family: $ff-ss;
     font-weight: $fw-bold;
     font-size: 3.5rem;
     color: $blue;
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
-.work-subtitle {
-    font-family: $ff-ss;
-    font-size: 1.8rem;
-    margin-top: 1rem;
+.work-info {
+    width: 50%;
+    min-width: 30rem;
+    max-width: 50rem;
+    background-color: $blue;
+    min-height: 20rem;
+    padding: 2rem 4rem;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
-.work-description{
+.work-sub {
+    opacity: 0.5;
+}
+
+.work-desc{
+    color: $white;
     font-family: $ff-s;
-    margin: 3rem 0;
-    max-width: 55ch;
+    margin: 2rem 0;
+    line-height: 2.6rem;
+
+    a, a:visited {
+        color: $white;
+        text-decoration: none;
+        border-bottom: 1px solid $white;
+    }
+}
+
+.work-tools {
+    opacity: 0.5;
+}
+
+.center {
+    margin: 0 auto;
+    text-align:center;
 }
 
 .work-link {
     position: relative;
-    margin-left: 1.6rem;
+    width: 100%;
+    color: $white;
+    text-decoration: none;
+    text-align:center;
+
+    &::visited {
+        color: $white;
+    }
 
     &:before {
         content: '';
@@ -101,13 +106,3 @@
     }
 }
 
-@keyframes imageRise {
-    from {
-        opacity: 0;
-        transform: translateY(400px);
-    }
-    to {
-        opacity: 1;
-        transform: translateT(0);
-    }
-}
