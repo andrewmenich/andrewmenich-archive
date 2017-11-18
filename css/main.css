@@ -434,19 +434,17 @@ template {
   .header-nested button {
     font-size: 2.5rem;
     margin: 10rem auto 0;
+    background-color: #69c3c6;
     color: #474747;
     border: 3px solid #474747;
-    background-color: transparent;
     padding: 1.5rem;
     width: 30rem;
     height: 7rem;
     outline: none;
     cursor: pointer;
     display: block; }
-  .header-nested button:focus {
-    background-color: rgba(0, 0, 0, 0.25);
-    color: #FFFFFF;
-    border: 3px solid #FFFFFF; }
+  .header-nested button:focus, .header-nested button:hover {
+    background-color: #45b3b7; }
 
 .scroll {
   font-size: 2rem;

@@ -8,7 +8,6 @@
     height: 100vh;
     min-height: 100vh;
     
-
     h1, h2 {
         font-family: $ff-ss;
         font-weight: $fw-norm;
@@ -29,7 +28,6 @@
         
     }
 
-    
     img {
         height: 100%;
         object-fit: cover;
@@ -64,9 +62,9 @@
     button {
         font-size: 2.5rem;
         margin: 10rem auto 0;
+        background-color: $blue2;
         color: $black;
         border: 3px solid $black;
-        background-color: transparent;
         padding: 1.5rem;
         width: 30rem;
         height: 7rem;
@@ -75,10 +73,8 @@
         display: block;
     }
 
-    button:focus {
-        background-color: rgba(0,0,0,0.25);
-        color: $white;
-        border: 3px solid $white;
+    button:focus, button:hover {
+        background-color: darken($blue2, 10%);
     }
 }
 
@@ -111,7 +107,6 @@
     @media (max-width: 600px){
         margin-right: 0;
     }
-
 }
 
 .logo-svg {
@@ -121,7 +116,6 @@
     @media (max-width: 600px){
         transform: translateX(0);
     }
-
 }
 
 .logo-name{
@@ -131,8 +125,6 @@
     @media (max-width: 600px){
         display: none;
     }
-
-
 }
 
 .hidden {
