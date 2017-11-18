@@ -190,3 +190,12 @@ var flkty = new Flickity( workSlider, {
   adaptiveHeight: true,
   dragThreshold: 10
 });
+
+// ======== FB Analytics Logger =========
+
+document.getElementById('sourceLink').addEventListener('click', function(){
+        FB.AppEvents.logEvent("Source Code Viewed");
+    })
+document.getElementById('resumeBtn').addEventListener('click', function(){
+        FB.AppEvents.logEvent("Resume Viewed");
+    })
