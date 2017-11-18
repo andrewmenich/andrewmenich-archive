@@ -16,6 +16,16 @@
   font-size: 2rem;
   text-align: center; }
 
+.emoji {
+  margin: 0;
+  padding: 0;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols"; }
+
+.inline-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  border-bottom: 1px solid #FFFFFF; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -418,7 +428,9 @@ template {
   -ms-flex: 1 2 35%;
   flex: 1 2 35%;
   color: #FFFFFF;
-  overflow: hidden; }
+  overflow: hidden;
+  /* fixes opacity issue on iOS Safari */
+  -webkit-transform: translate3d(0, 0, 0); }
   .header-nested button {
     font-size: 2.5rem;
     margin: 10rem auto 0;
@@ -651,10 +663,6 @@ template {
   font-family: "PT Serif", serif;
   margin: 2rem 0;
   line-height: 2.6rem; }
-  .work-desc a, .work-desc a:visited {
-    color: #FFFFFF;
-    text-decoration: none;
-    border-bottom: 1px solid #FFFFFF; }
 
 .work-tools {
   opacity: 0.5; }
@@ -798,7 +806,7 @@ template {
   height: auto;
   background-color: #F7F7F7; }
   .social-container ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 1rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -808,13 +816,13 @@ template {
     -ms-flex-direction: row;
     flex-direction: row;
     list-style: none;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     -ms-flex-item-align: center;
     align-self: center; }
   .social-container li {
-    z-index: 999; }
+    z-index: 999;
+    -webkit-transform: translate3d(0, 0, 0); }
     .social-container li a, .social-container li a:visited {
       color: #474747; }
   .social-container i {
@@ -1024,7 +1032,7 @@ template {
   margin: 0 1rem; }
 
 input, textarea {
-  width: 100%;
+  width: 95%;
   display: block;
   margin-top: 2rem;
   outline: none;
@@ -1072,14 +1080,32 @@ textarea {
   text-decoration: none;
   border-bottom: 2px solid #06beb6; }
 
-.alert {
+.alert, .warning {
   width: 100%;
   text-align: center;
-  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 5px; }
+
+.alert {
   background-color: #d4edda;
+  border: 1px solid #c3e6cb;
   color: #155724;
-  padding: 1rem 0;
   display: none; }
+
+.warning {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  display: none; }
+
+footer {
+  padding: 1rem 0;
+  height: 100%;
+  width: 100%;
+  background-color: #474747; }
+  footer p {
+    color: #FFFFFF;
+    text-align: center; }
 
 html {
   font-size: 10px; }

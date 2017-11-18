@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     height: 100vh;
     min-height: 100vh;
+    
 
     h1, h2 {
         font-family: $ff-ss;
@@ -14,7 +15,7 @@
         font-size: 4rem;
         line-height: 1.25;
         cursor: default;
-
+        
         @media (max-width: 600px){
             font-size: 3rem;
         }
@@ -25,6 +26,7 @@
         @media (min-width:600px){
             display: none;
         }
+        
     }
 
     
@@ -32,6 +34,7 @@
         height: 100%;
         object-fit: cover;
         flex: 2 1 57%;
+        
     }
 }
 
@@ -54,6 +57,9 @@
     flex: 1 2 35%;
     color: $white;
     overflow: hidden;
+    /* fixes opacity issue on iOS Safari */
+    -webkit-transform: translate3d(0,0,0);
+    
 
     button {
         font-size: 2.5rem;

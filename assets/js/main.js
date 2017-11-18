@@ -134,10 +134,30 @@ function saveMessage(userName, userEmail, userMessage) {
 
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
+function checkValidity() {
+    if (userName.value === "" || userEmail.value === "" || userMessage.value === "") {
+        document.querySelector('.warning').style.display = "block";
+
+        setTimeout(function(){
+            document.querySelector('.warning').style.display = "none";
+        }, 5000);
+
+        return false;
+    }
+}
+
 function submitForm(e){
     // Prevents default attempt of submitting form to current page
     e.preventDefault();
-    //get values
+
+    checkValidity();
+
+    if(checkValidity() === false){
+        return;
+    }
+
+
+    // get values
     let userName = getInputVal('userName'),
         userEmail = getInputVal('userEmail'),
         userMessage = getInputVal('userMessage');
@@ -151,12 +171,14 @@ function submitForm(e){
     //hide alert after 3 s.
     setTimeout(function(){
         document.querySelector('.alert').style.display = "none";
-    }, 3000);
+    }, 5000);
 
     //clear inputs
     document.getElementById('contactForm').reset();
 }
 
+
+// ========== FLICKITY SLIDER ==========
 var workSlider = document.getElementById('slider');
 var flkty = new Flickity( workSlider, {
   cellAlign: 'left',
@@ -165,6 +187,6 @@ var flkty = new Flickity( workSlider, {
   freeScroll: false,
   wrapAround: true,
   bgLazyLoad: true,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  dragThreshold: 10
 });
-
