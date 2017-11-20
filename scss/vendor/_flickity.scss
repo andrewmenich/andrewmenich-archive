@@ -1,0 +1,8 @@
+.flickity-prev-next-button {
+    background: transparent;
+
+    @media screen and (max-width: 576px){
+      visibility: hidden;
+    }
+    
+  }

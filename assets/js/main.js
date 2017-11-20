@@ -28,65 +28,22 @@ function buttonClick(ids){
 buttonClick('headerBtn');
 buttonClick('contactBtn');
 
-// ====== SAMPLE WORK SLIDER =======
-
-// let slide = document.querySelectorAll('.sample'),
-//     leftArrow = document.querySelector('#slide-left'),
-//     rightArrow = document.querySelector('#slide-right'),
-//     current = 0;
-
-// // clear all slides
-// function reset() {
-//     for(let i = 0; i < slide.length; i++) {
-//         slide[i].style.display = 'none';
-//     }
-// }
-
-// // initialize slider
-// function startSlide(){
-//     reset();
-//     slide[0].style.display = 'block';
-// }
-
-// // Show Previous
-// function slideLeft(){
-//     reset();
-//     slide[current - 1].style.display = 'block';
-//     current--;
-// }
-
-// // Show Next
-// function slideRight(){
-//     reset();
-//     slide[current + 1].style.display = 'block';
-//     current++;
-// }
-
-// // left button functionality
-// leftArrow.addEventListener('click', function(){
-//     if(current === 0){
-//         current = slide.length;
-//     }
-//     slideLeft();
-// });
-
-// // right button functionality
-// rightArrow.addEventListener('click', function(){
-//     if(current === slide.length - 1){
-//         current = -1
-//     }
-//     slideRight();
-// });
-
-// startSlide();
-
 // ===== Reveal on Scroll settings ======
 
 // reveal skills section
-window.sr = ScrollReveal();
-sr.reveal('.skill-container', {
-    duration: 1000
-});
+// window.sr = ScrollReveal();
+// sr.reveal('.sample-work', {
+//     duration: 1000
+// });
+// sr.reveal('.about-me', {
+//     duration: 1000
+// });
+// sr.reveal('.skills-section', {
+//     duration: 1000
+// });
+// sr.reveal('.contact', {
+//     duration: 1000
+// });
 
 // ====== TYPED.JS SETTINGS =======
 
@@ -188,8 +145,25 @@ var flkty = new Flickity( workSlider, {
   wrapAround: true,
   bgLazyLoad: true,
   adaptiveHeight: true,
-  dragThreshold: 10
+  dragThreshold: 12
 });
+
+
+flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+    if ( !cellElement ) {
+      return;
+    }
+
+    var workFilter = document.getElementsByClassName('bg-filter');
+    var infoBoxes = document.getElementsByClassName('work-info');
+    for(var i = 0; i < infoBoxes.length; i++){
+        infoBoxes[i].classList.toggle('hide'); 
+        workFilter[i].classList.toggle('filter-on'); 
+    }
+
+    // cellElement.classList.toggle('is-clicked');
+    // logger.textContent = 'Cell ' + ( cellIndex + 1 )  + ' clicked';
+  });
 
 // ======== FB Analytics Logger =========
 

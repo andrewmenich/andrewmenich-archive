@@ -35,7 +35,7 @@
         font-family: "Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols";
     }
     h5 {
-        color: $black;
+        color: $blue;
         font-size: 3rem;
         font-weight: $fw-norm;
         margin: 2rem 0;
@@ -180,12 +180,13 @@
 }
 
 .contact-button {
-    background-color: $red;
-    border: 2px solid $red;
+    background-color: $blue;
+    border: 2px solid $blue;
     color: $white;
 
     &:hover {
-        background-color: lighten($red, 5%);
+        background-color: $blue2;
+        border: 2px solid darken($blue2, 5%);
     }
     &:visited {
         color: $white;
