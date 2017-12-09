@@ -148,12 +148,14 @@ var flkty = new Flickity( workSlider, {
   dragThreshold: 12
 });
 
+var slide1 = document.getElementById('cleganeBowl');
 
-flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+flkty.on( 'staticClick', function(event, pointer, cellElement, cellIndex ) {
     if ( !cellElement ) {
-      return;
+        return;
+    }else if(event.target.classList.contains('work-link')){
+        return;
     }
-
     var workFilter = document.getElementsByClassName('bg-filter');
     var infoBoxes = document.getElementsByClassName('work-info');
     for(var i = 0; i < infoBoxes.length; i++){

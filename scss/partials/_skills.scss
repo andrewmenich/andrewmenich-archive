@@ -53,10 +53,12 @@
 
     ul {
         padding-left: 0;
+        margin: 0 auto;
         text-align: center;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        max-width: 65rem;
 
         @media screen and (max-width: 500px){
             justify-content: center;

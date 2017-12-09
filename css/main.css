@@ -991,6 +991,7 @@ template {
         margin-top: 0; } }
   .skill-box ul {
     padding-left: 0;
+    margin: 0 auto;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -998,7 +999,8 @@ template {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    max-width: 65rem; }
     @media screen and (max-width: 500px) {
       .skill-box ul {
         -webkit-box-pack: center;
