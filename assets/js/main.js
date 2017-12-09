@@ -160,9 +160,6 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
         infoBoxes[i].classList.toggle('hide'); 
         workFilter[i].classList.toggle('filter-on'); 
     }
-
-    // cellElement.classList.toggle('is-clicked');
-    // logger.textContent = 'Cell ' + ( cellIndex + 1 )  + ' clicked';
   });
 
 // ======== FB Analytics Logger =========

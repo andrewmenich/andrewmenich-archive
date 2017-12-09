@@ -713,7 +713,8 @@ template {
   width: 100%;
   color: #FFFFFF;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  z-index: 999; }
   .work-link::visited {
     color: #FFFFFF; }
   .work-link:before {

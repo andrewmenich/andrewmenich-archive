@@ -113,6 +113,7 @@
     color: $white;
     text-decoration: none;
     text-align:center;
+    z-index: 999;
 
     &::visited {
         color: $white;
@@ -125,4 +126,3 @@
         bottom: 0; left: -2.5rem;
     }
 }
-
